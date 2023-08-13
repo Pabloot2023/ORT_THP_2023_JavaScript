@@ -1,17 +1,26 @@
-// Realizá un programa que permita que el usuario ingrese su nombre. 
-// El programa debe emitir una salida con un mensaje de bienvenida que incluya el nombre ingresado. [EC]
-
-console.log("\n Bienvenidos a THP!!!!!!");
-console.log("\n Aprenderemos a programar muchas cosas!!!!!");
+// Realizá un programa que permita ingresar un número entero. Debe mostrarse el número ingresado:
+// Multiplicado por 5.
+// Dividido por 2.
 
 const readline = require('readline');
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
+const miTeclado = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
 });
 
-rl.question('\n Por favor, ingrese su nombre: ', function(nombre) {
-    console.log(`\n ¡Bienvenido, ${nombre}! \n`);
-  rl.close();
+let numero = 0;
+
+console.log("Ingrese un numero entero: ");
+miTeclado.once('line', function (line) {
+    numero = parseFloat(line.replace(',', '.'));
+
+    console.log("\n El numero ingresado es: " + numero);
+
+    console.log("\n El numero multiplicado por 5 es: " + (numero * 5));
+
+    console.log("\n El numero dividido por 2 es: " + (numero / 2));
+
+
+    miTeclado.close();
 });
