@@ -22,5 +22,6 @@ miTeclado.once('line', function (line) {
     console.log("\n El numero dividido por 2 es: " + (numero / 2));
 
 
+
     miTeclado.close();
 });
