@@ -1,5 +1,5 @@
-// Realizá un programa que permita que el usuario ingrese su nombre.
-// El programa debe emitir una salida con un mensaje de bienvenida que incluya el nombre ingresado. [EC]
+// Realizá un programa que permita ingresar 3 notas pertenecientes a tres trimestres distintos
+// para cierto alumno de nivel secundario.Debe calcularse y mostrarse la nota promedio. [EC]
 
 const readline = require('readline');
 
@@ -41,22 +41,24 @@ function pedirTerceraNota() {
     console.log("\n Ingrese la tercera nota: ");
     miTeclado.once('line', function (line) {
         notaparcial3 = parseFloat(line.replace('.', ','));
-
-        sumatoriaDeNotas = notaparcial1 + notaparcial2 + notaparcial3;
-        promedio = sumatoriaDeNotas / 3;
-
-        console.log("\n" + "Hola " + nombre + "!!");
-        console.log("La nota del primer parcial es: " + notaparcial1.toFixed(2));
-        console.log("La nota del segundo parcial es: " + notaparcial2.toFixed(2));
-        console.log("La nota del tercer parcial es: " + notaparcial3.toFixed(2) + "\n");
-        console.log("El Promedio es: " + promedio.toFixed(2) + "\n");
-
-        if (promedio >= 4) {
-            console.log("Felicitaciones has aprobado!!!" + "\n");
-        } else {
-            console.log("Lamentablemente no has aprobado..." + "\n");
-        }
-
-        miTeclado.close();
     });
+}
+
+sumatoriaDeNotas = notaparcial1 + notaparcial2 + notaparcial3;
+promedio = sumatoriaDeNotas / 3;
+
+console.log("\n" + "Hola " + nombre + "!!");
+console.log("La nota del primer parcial es: " + notaparcial1.toFixed(2));
+console.log("La nota del segundo parcial es: " + notaparcial2.toFixed(2));
+console.log("La nota del tercer parcial es: " + notaparcial3.toFixed(2) + "\n");
+console.log("El Promedio es: " + promedio.toFixed(2) + "\n");
+
+if (promedio >= 4) {
+    console.log("Felicitaciones has aprobado!!!" + "\n");
+} else {
+    console.log("Lamentablemente no has aprobado..." + "\n");
+}
+
+miTeclado.close();
+}
 }
