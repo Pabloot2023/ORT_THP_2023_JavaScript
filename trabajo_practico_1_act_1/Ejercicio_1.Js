@@ -1,4 +1,5 @@
-// Ejercicio_1.js
+// Realizá un programa que permita que el usuario ingrese su nombre. 
+// El programa debe emitir una salida con un mensaje de bienvenida que incluya el nombre ingresado. [EC]
 
 console.log("\n Bienvenidos a THP!!!!!!");
 console.log("\n Aprenderemos a programar muchas cosas!!!!!");
