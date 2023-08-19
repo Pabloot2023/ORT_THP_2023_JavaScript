@@ -20,7 +20,7 @@ let horaSab = Math.floor(cantHora / 2) * valorHora;
 
 console.log("Ingrese el valor monetario de una hora de trabajo: ");
 miTeclado.once('line', function (line) {
-    valorHora = parseFloat(line);
+    valorHora = parseFloat(line.replace(',', '.'));
     pedirCantidadHoras();
 });
 
@@ -32,16 +32,21 @@ function pedirCantidadHoras() {
     });
 }
 
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+}
+
 function calcularSalario() {
     pagoDia = valorHora * cantHora;
     pagoSem = pagoDia * 7;
     horaSab = Math.floor(cantHora / 2) * valorHora;
 
     console.log("\nEl valor del salario semanal es:");
-    console.log("$ " + pagoSem);
+    console.log("$ " + numberWithCommas(pagoSem));
 
     console.log("\nEl valor del salario semanal incluyendo media jornada del sábado es:");
-    console.log("$ " + (pagoSem + horaSab));
+    console.log("$ " + numberWithCommas(pagoSem + horaSab));
 
     miTeclado.close();
 }
+  
