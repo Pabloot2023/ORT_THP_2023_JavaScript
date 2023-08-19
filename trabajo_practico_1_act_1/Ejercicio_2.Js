@@ -1,5 +1,7 @@
-// Realiza un programa que permita ingresar 3 notas pertenecientes a tres trimestres distintos
-// para cierto alumno de nivel secundario.Debe calcularse y mostrarse la nota promedio. [EC]
+/*Enunciado
+Realiza un programa que permita ingresar 3 notas pertenecientes a tres trimestres distintos
+para cierto alumno de nivel secundario.Debe calcularse y mostrarse la nota promedio. [EC]
+*/
 
 const readline = require('readline');
 

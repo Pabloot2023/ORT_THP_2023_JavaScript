@@ -1,5 +1,7 @@
-// Realizá un programa que permita que el usuario ingrese su nombre. 
-// El programa debe emitir una salida con un mensaje de bienvenida que incluya el nombre ingresado. [EC]
+/*Enunciado
+Realiza un programa que permita que el usuario ingrese su nombre. 
+El programa debe emitir una salida con un mensaje de bienvenida que incluya el nombre ingresado. [EC]
+*/
 
 console.log("\n Bienvenidos a THP!!!!!!");
 console.log("\n Aprenderemos a programar muchas cosas!!!!!");
@@ -12,6 +14,6 @@ const rl = readline.createInterface({
 });
 
 rl.question('\n Por favor, ingrese su nombre: ', function(nombre) {
-    console.log(`\n ¡Bienvenido, ${nombre}! \n`);
+    console.log(`\n ï¿½Bienvenido, ${nombre}! \n`);
   rl.close();
 });

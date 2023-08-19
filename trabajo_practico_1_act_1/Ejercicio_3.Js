@@ -1,6 +1,8 @@
-// Realiza un programa que permita ingresar un numero entero. Debe mostrarse el numero ingresado:
-// Multiplicado por 5.
-// Dividido por 2.
+/*Enunciado
+Realiza un programa que permita ingresar un numero entero. Debe mostrarse el numero ingresado:
+Multiplicado por 5.
+Dividido por 2.
+*/
 
 const readline = require('readline');
 
