@@ -3,7 +3,7 @@
  	indique cuál de ellos es el mayor. [EC] 
 */
 
-<<<<<<< HEAD
+
 const readline = require('readline');
 
 const miTeclado = readline.createInterface({
@@ -35,7 +35,3 @@ miTeclado.once('line', function (line1) {
         miTeclado.close();
     });
 });
-
-=======
-
->>>>>>> 8a5c399cf9a2ab51010092d473030a941f176344
