@@ -8,3 +8,50 @@
     si la persona está en edad de jubilarse.
 */
 
+const readline = require('readline');
+
+const miTeclado = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+function preguntarEdad() {
+    return new Promise((resolve) => {
+        miTeclado.question("Ingrese la edad: ", (input) => {
+            const edad = parseInt(input);
+            if (!isNaN(edad)) {
+                resolve(edad);
+            } else {
+                console.log("Los valores ingresados son inválidos.");
+                preguntarEdad().then(resolve);
+            }
+        });
+    });
+}
+
+function preguntarGenero() {
+    return new Promise((resolve) => {
+        miTeclado.question("Ingrese el género (F/M): ", (input) => {
+            const genero = input.trim().toUpperCase();
+            if (genero === 'F' || genero === 'M') {
+                resolve(genero);
+            } else {
+                console.log("El género ingresado es inválido.");
+                preguntarGenero().then(resolve);
+            }
+        });
+    });
+}
+
+(async () => {
+    const edad = await preguntarEdad();
+    const genero = await preguntarGenero();
+
+    if ((genero === 'F' && edad >= 60) || (genero === 'M' && edad >= 65)) {
+        console.log("Está en edad de jubilarse.");
+    } else {
+        console.log("No está en edad de jubilarse.");
+    }
+
+    miTeclado.close();
+})();
