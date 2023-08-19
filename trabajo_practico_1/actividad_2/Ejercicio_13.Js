@@ -37,6 +37,11 @@ miTeclado.once('line', function (line1) {
                 mayor = numero3;
             }
 
+			/*	    else if (numero3 > mayor) {
+			        mayor = numero3;  
+					}
+			*/	    
+
             console.log("El numero mayor es: " + mayor);
 
             miTeclado.close();
